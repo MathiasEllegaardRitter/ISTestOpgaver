@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="b1f6983d-54fc-4b52-be04-1ed98b92491c" ChangeDateTime="10/10/2021 23:15:10">
+    <Property Name="ElementName" Value="[dbo].[Borrow].[bookIsbn]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Borrow]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="bookIsbnFk" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7b153c10-8aff-419c-ac3c-54e0d952d16c" ChangeDateTime="10/10/2021 23:43:10">
+    <Property Name="ElementName" Value="[dbo].[Borrow].[bookIsbnFk]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Borrow]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="bookIsbn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="62b537ea-e4fc-4992-8859-a39659d7fa2f" ChangeDateTime="10/10/2021 23:43:15">
+    <Property Name="ElementName" Value="[dbo].[Borrow].[librarUserIdFk]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Borrow]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="libUserId" />
+  </Operation>
+</Operations>

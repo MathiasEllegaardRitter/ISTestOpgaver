@@ -1,0 +1,51 @@
+﻿@model IEnumerable<TestOpgave_1._4_Lib.Models.BookModel>
+
+@{
+    ViewBag.Title = "ViewBooks";
+}
+
+<h2>ViewBooks</h2>
+
+<p>
+    <li>@Html.ActionLink("Create Book", "RegisterBook", "Home")</li>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isbnNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isBorrowed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isbnNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isBorrowed)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

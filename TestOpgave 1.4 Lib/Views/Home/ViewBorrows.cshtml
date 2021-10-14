@@ -1,0 +1,55 @@
+﻿@model IEnumerable<TestOpgave_1._4_Lib.Models.BorrowModel>
+
+@{
+    ViewBag.Title = "ViewBorrows";
+}
+
+<h2>ViewBorrows</h2>
+
+<p>
+    @Html.ActionLink("Create New", "BorrowBook", "Home")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.bookIsbn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.libUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hasReturned)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.bookIsbn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.libUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateEnd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hasReturned)
+        </td>
+        <td>
+            @Html.ActionLink("Deliver", "DeliverBook", new { bookIsbn = item.bookIsbn, libUserId = item.libUserId })
+        </td>
+    </tr>
+}
+
+</table>
